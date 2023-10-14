@@ -33,28 +33,28 @@ public class PlayerMove : MonoBehaviour
     {
 
 
-        // # ÀÌµ¿
+        // # ì´ë™
         float h = 1.0f;
         float v = Input.GetAxis("Vertical");
-   
 
-        // ÀÌµ¿ °Å¸® º¸Á¤ - ¼º´É¿¡ µû¶ó ÇÑ ÇÁ·¹ÀÓ¿¡ ³ª¿À´Â °á°ú °ª º¸Á¤
+
+        // ì´ë™ ê±°ë¦¬ ë³´ì • - ì„±ëŠ¥ì— ë”°ë¼ í•œ í”„ë ˆì„ì— ë‚˜ì˜¤ëŠ” ê²°ê³¼ ê°’ ë³´ì •
         h = h * speed * Time.deltaTime;
         v = v * speed * Time.deltaTime;
 
 
-        // ½ÇÁ¦ ÀÌµ¿ 
+        // ì‹¤ì œ ì´ë™ 
         transform.Translate(Vector3.right * h);
 
 
 
-        // Á¡ÇÁ
+        // ì í”„
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (isjumping == false) // ¹Ù´Ú¿¡ ´ê¾ÆÀÖÀ» ‹š¸¸ Á¡ÇÁ °¡´ÉÇÏµµ·Ï
+            if (isjumping == false) // ë°”ë‹¥ì— ë‹¿ì•„ìˆì„ Â‹Âšë§Œ ì í”„ ê°€ëŠ¥í•˜ë„ë¡
             {
 
-                rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // À§ÂÊÀ¸·Î ÈûÀ» ÁÜ
+                rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // ìœ„ìª½ìœ¼ë¡œ í˜ì„ ì¤Œ
 
                 isjumping = true;
 
@@ -66,14 +66,14 @@ public class PlayerMove : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision) // Ãæµ¹ 
+    private void OnCollisionEnter2D(Collision2D collision) // ì¶©ëŒ 
     {
-        if (collision.gameObject.CompareTag("ground")) // Ä³¸¯ÅÍ°¡ ¶¥¿¡ ´ê¾ÒÀ» ¶§ Á¡ÇÁ °¡´É
+        if (collision.gameObject.CompareTag("ground")) // ìºë¦­í„°ê°€ ë•…ì— ë‹¿ì•˜ì„ ë•Œ ì í”„ ê°€ëŠ¥
         {
             isjumping = false;
         }
 
-        if (collision.gameObject.CompareTag("start")) // ½ÃÀÛ ¶¥À» ¹âÀ¸¸é ¹è°æÀ½¾Ç ÇÃ·¹ÀÌ!
+        if (collision.gameObject.CompareTag("start")) // ì‹œì‘ ë•…ì„ ë°Ÿìœ¼ë©´ ë°°ê²½ìŒì•… í”Œë ˆì´!
         {
             AudioManager.instance.PlayBGM("BGM_1");
         }
