@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     public bool isjumping = false;
 
     public Rigidbody2D rigid;
-
+    public SpriteRenderer spriteRenderer;
 
 
 
@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
-
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
@@ -77,6 +77,27 @@ public class PlayerMove : MonoBehaviour
         {
             AudioManager.instance.PlayBGM("BGM_1");
         }
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("enemy")) // 적과 충돌 시
+            OnDamaged();
+    }
+
+
+    public void OnDamaged()
+    {
+        gameObject.layer = 8; // 무적 상태를 설정한 레이어로 바꿈
+        spriteRenderer.color = new Color(1, 1, 1, 0.4f); // 반투명해짐
+        
+        Invoke("OffDamaged", 2f); // 2초 후 OffDamaged 함수 실행
+
+    }
+
+    public void OffDamaged()
+    {
+        gameObject.layer = 6; // 원래 상태의 레이어로 바꿈
+        spriteRenderer.color = new Color(1, 1, 1, 1); // 투명 상태 해제
     }
 }
