@@ -8,7 +8,6 @@ public class Obstacle : MonoBehaviour
 
     public Rigidbody2D rigid;
     
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,12 +19,17 @@ public class Obstacle : MonoBehaviour
     {
         
     }
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {//플레이어와 접촉 시 LifeObject에 부착된 PlayerHealth스크립트의 TakeDamage함수를 실행.
         if (other.CompareTag("Player"))
         {
             GameObject lives = GameObject.Find("LifeObject");
             lives.gameObject.GetComponent<PlayerHealth>().TakeDamage();
+
         }
     }
+
 }
+
