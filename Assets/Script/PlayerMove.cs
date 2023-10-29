@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    float speed = 3.0f;
+    public float speed; //= 3.0f;
     public float jumpForce;
     public bool isjumping = false;
 
     public Rigidbody2D rigid;
     public SpriteRenderer spriteRenderer;
-
-
 
     void Awake()
     {
@@ -33,28 +31,28 @@ public class PlayerMove : MonoBehaviour
     {
 
 
-        // # 이동
+        // # ????
         float h = 1.0f;
         float v = Input.GetAxis("Vertical");
    
 
-        // 이동 거리 보정 - 성능에 따라 한 프레임에 나오는 결과 값 보정
+        // ???? ???? ???? - ?????? ???? ?? ???????? ?????? ???? ?? ????
         h = h * speed * Time.deltaTime;
         v = v * speed * Time.deltaTime;
 
 
-        // 실제 이동 
+        // ???? ???? 
         transform.Translate(Vector3.right * h);
 
 
 
-        // 점프
+        // ????
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (isjumping == false) // 바닥에 닿아있을 떄만 점프 가능하도록
+            if (isjumping == false) // ?????? ???????? ???? ???? ??????????
             {
 
-                rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // 위쪽으로 힘을 줌
+                rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // ???????? ???? ??
 
                 isjumping = true;
 
@@ -66,14 +64,14 @@ public class PlayerMove : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision) // 충돌 
+    private void OnCollisionEnter2D(Collision2D collision) // ???? 
     {
-        if (collision.gameObject.CompareTag("ground")) // 캐릭터가 땅에 닿았을 때 점프 가능
+        if (collision.gameObject.CompareTag("ground")) // ???????? ???? ?????? ?? ???? ????
         {
             isjumping = false;
         }
 
-        if (collision.gameObject.CompareTag("start")) // 시작 땅을 밟으면 배경음악 플레이!
+        if (collision.gameObject.CompareTag("start")) // ???? ???? ?????? ???????? ??????!
         {
             AudioManager.instance.PlayBGM("BGM_1");
         }
@@ -81,23 +79,23 @@ public class PlayerMove : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("enemy")) // 적과 충돌 시
+        if (collision.gameObject.CompareTag("enemy")) // ???? ???? ??
             OnDamaged();
     }
 
 
     public void OnDamaged()
     {
-        gameObject.layer = 8; // 무적 상태를 설정한 레이어로 바꿈
-        spriteRenderer.color = new Color(1, 1, 1, 0.4f); // 반투명해짐
+        gameObject.layer = 8; // ???? ?????? ?????? ???????? ????
+        spriteRenderer.color = new Color(1, 1, 1, 0.4f); // ??????????
         
-        Invoke("OffDamaged", 2f); // 2초 후 OffDamaged 함수 실행
+        Invoke("OffDamaged", 2f); // 2?? ?? OffDamaged ???? ????
 
     }
 
     public void OffDamaged()
     {
-        gameObject.layer = 6; // 원래 상태의 레이어로 바꿈
-        spriteRenderer.color = new Color(1, 1, 1, 1); // 투명 상태 해제
+        gameObject.layer = 6; // ???? ?????? ???????? ????
+        spriteRenderer.color = new Color(1, 1, 1, 1); // ???? ???? ????
     }
 }
