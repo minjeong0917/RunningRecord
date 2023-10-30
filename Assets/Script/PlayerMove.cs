@@ -29,35 +29,39 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        if (GameManager.instance.isStartGame)
+        {
+            rigid.gravityScale = 6; // 게임 시작 후 떨어지도록
 
-
-        // # ????
-        float h = 1.0f;
-        float v = Input.GetAxis("Vertical");
+            float h = 1.0f;
+            float v = Input.GetAxis("Vertical");
    
 
-        // ???? ???? ???? - ?????? ???? ?? ???????? ?????? ???? ?? ????
-        h = h * speed * Time.deltaTime;
-        v = v * speed * Time.deltaTime;
+     
+            h = h * speed * Time.deltaTime;
+            v = v * speed * Time.deltaTime;
 
 
-        // ???? ???? 
-        transform.Translate(Vector3.right * h);
+        
+            transform.Translate(Vector3.right * h);
 
 
 
-        // ????
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (isjumping == false) // ?????? ???????? ???? ???? ??????????
+        
+            if (Input.GetKeyDown(KeyCode.Space))
             {
+                if (isjumping == false) 
+                {
 
-                rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // ???????? ???? ??
+                    rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // ???????? ???? ??
 
-                isjumping = true;
+                    isjumping = true;
 
+                }
+                else return;
             }
-            else return;
+
         }
 
 
