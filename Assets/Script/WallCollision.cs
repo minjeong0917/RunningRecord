@@ -20,8 +20,7 @@ public class WallCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameObject lives = GameObject.Find("LifeObject");
-            lives.gameObject.GetComponent<PlayerHealth>().PlayerDied();
+            GameManager.instance.GameOver();
         }
     }
 }
