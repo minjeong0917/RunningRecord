@@ -81,10 +81,16 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("enemy")) // ???? ???? ??
             OnDamaged();
+
+        if (collision.gameObject.CompareTag("wall"))
+        {
+            GameManager.instance.GameOver();
+        }
     }
 
 

@@ -13,9 +13,9 @@ public class PlayerHealth : MonoBehaviour
         currentLives = maxHealth;//현재 생명 초기화
 
     }
-    private void Update()
+    private void Initialized()
     {
-        
+        currentLives = maxHealth;
     }
     
     public void TakeDamage()
@@ -35,13 +35,8 @@ public class PlayerHealth : MonoBehaviour
             if (currentLives <= 0)
             {
                 // 라이프가 모두 소진되었을 때
-                PlayerDied();
+                GameManager.instance.GameOver();
             }
         }
-    }
-    public void PlayerDied()
-    {
-        Debug.Log("You Died");
-        //사망 시 반응 아직 안 만들었음
     }
 }
