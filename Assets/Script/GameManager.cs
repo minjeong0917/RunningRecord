@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     public void GameStart()
     {
-        SceneManager.LoadScene("Stage1");
+        LoadingController.LoadScene("Stage1");
         /*
         for( int i = 0; i < goGameUI.Length; i++) // 모두 활성화할때까지 반복
         {
