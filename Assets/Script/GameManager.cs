@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] goGameUI = null;
+    //[SerializeField] GameObject[] goGameUI = null;
     public GameObject gameover = null;
     public static GameManager instance;
     public bool isStartGame = false;
@@ -19,10 +20,12 @@ public class GameManager : MonoBehaviour
 
     public void GameStart()
     {
+        SceneManager.LoadScene("Stage1");
+        /*
         for( int i = 0; i < goGameUI.Length; i++) // 모두 활성화할때까지 반복
         {
             goGameUI[i].SetActive(true);
-        }
+        }*/
         isStartGame = true;
     }
 
