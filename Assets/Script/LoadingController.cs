@@ -12,6 +12,8 @@ public class LoadingController : MonoBehaviour
     [SerializeField]
     Image progress;
 
+
+
     public static void LoadScene(string sceneName)
     {
         nextScene = sceneName;
@@ -23,6 +25,8 @@ public class LoadingController : MonoBehaviour
     void Start()
     {
         StartCoroutine(LoadSceneProcess());
+
+
     }
 
     IEnumerator LoadSceneProcess()
@@ -41,7 +45,7 @@ public class LoadingController : MonoBehaviour
             }
             else //그 이후에는 페이크 로딩에 맞춰 1초간 시간 채운뒤 씬 불러옴
             {
-                timer += Time.unscaledDeltaTime;
+                timer += Time.unscaledDeltaTime*0.3f; //*0.3은 로딩창 보여주려고 임시로 늘려놓음! 원래는 없어야함!
                 progress.fillAmount = Mathf.Lerp(0.9f, 1.0f, timer);
                 if (progress.fillAmount >= 1.0f)
                 {
