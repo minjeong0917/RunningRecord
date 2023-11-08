@@ -2,23 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class DataHandler : MonoBehaviour
 {
-    public void SaveData(float xValue)
+    public void SaveData(string Filename, float xValue)
     {
-        string filePath = Application.dataPath + "/ThornXPoint.txt";
-        float roundedXValue = Mathf.Round(xValue + 3.2f);
+        Debug.Log("/" + Filename + ".txt");
+        string filePath = Application.dataPath + "/Stages/"+SceneManager.GetActiveScene().name+"/"+Filename+".txt";
+        
 
 
         // 데이터를 텍스트 파일에 저장
-        File.AppendAllText(filePath, roundedXValue.ToString("F1")+"\n");
+        File.AppendAllText(filePath, xValue.ToString("F1")+"\n");
     }
 
-    public List<float> LoadData()
+    public List<float> LoadData(string Filename)
     {
         List<float> loadedData = new List<float>();
-        string filePath = Application.dataPath + "/ThornXPoint.txt";
+        string filePath = Application.dataPath + "/Stages/" + SceneManager.GetActiveScene().name + "/" + Filename + ".txt";
 
         if (File.Exists(filePath))
         {
