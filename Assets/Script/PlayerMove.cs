@@ -32,7 +32,7 @@ public class PlayerMove : MonoBehaviour
         
         if (GameManager.instance.isStartGame)
         {
-            rigid.gravityScale = 6; // 게임 시작 후 떨어지도록
+            rigid.gravityScale = 6; // ???? ???? ?? ??????????
 
             float h = 1.0f;
             float v = Input.GetAxis("Vertical");
@@ -53,11 +53,10 @@ public class PlayerMove : MonoBehaviour
             {
                 if (isjumping == false) 
                 {
-
+                    isjumping = true;
                     rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // ???????? ???? ??
 
-                    isjumping = true;
-
+                  
                 }
                 else return;
             }
@@ -74,6 +73,8 @@ public class PlayerMove : MonoBehaviour
         {
             isjumping = false;
         }
+        
+
 
         if (collision.gameObject.CompareTag("start")) // ???? ???? ?????? ???????? ??????!
         {
@@ -91,6 +92,7 @@ public class PlayerMove : MonoBehaviour
         {
             GameManager.instance.GameOver();
         }
+
     }
 
 

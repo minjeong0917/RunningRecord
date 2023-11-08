@@ -6,19 +6,27 @@ public class TrapSpawner : MonoBehaviour
 {
     Camera mainCamera;
     public GameObject trapPrefab; // 프리팹을 인스펙터에서 할당해야 합니다.
-    public Vector3 spawnPosition; // 생성할 위치를 인스펙터에서 설정해야 합니다.
-    public PlayerMove movescript;
-    private List<float> xCoordinates = new List<float>(); // 100개의 float 값을 저장하는 리스트
+    private Vector3 spawnPosition; // 생성할 위치를 인스펙터에서 설정해야 합니다.
+    private List<float> TrapSpawnX = new List<float>();
     public DataHandler dataHandler;
-
-    // Start is called before the first frame update
+    private List<float> upFloorX = new List<float>();
+    private float FloorY;
+    private List<float> DropItem = new List<float>();
+    public GameObject ItemPrefab;
+    private float floorBasePosition;
     void Start()
     {
-        xCoordinates = dataHandler.LoadData();
-        for (int i = 0; i < xCoordinates.Count; i++)
+        TrapSpawnX = dataHandler.LoadData("ThornXPoint");
+        upFloorX = dataHandler.LoadData("UpFloor");
+        DropItem = dataHandler.LoadData("DropItem");
+        floorBasePosition = GameObject.Find("AllFloorObj").transform.position.x;
+        FloorY = GameObject.Find("Floor").transform.position.y + GameObject.Find("AllFloorObj").transform.position.y +0.1f;
+        for (int i = 0; i < TrapSpawnX.Count; i++)
         {
             TrapGenerate(i);
         }
+        for (int i = 0; i < DropItem.Count; i++)
+            ItemGenerate(i);
     }
 
     // Update is called once per frame
@@ -29,35 +37,37 @@ public class TrapSpawner : MonoBehaviour
     }
     void TrapGenerate(int i)
     {
-        spawnPosition = new Vector3(xCoordinates[i], -2.6f, 0.0f);
-        GameObject newTrap = Instantiate(trapPrefab, spawnPosition, Quaternion.identity);
+        spawnPosition = new Vector3(TrapSpawnX[i], FloorY, 0.0f);
 
-        /*GameObject newTrap = Instantiate(trapPrefab);
-        if (trapsParent != null)
+        for(int j=0;j<upFloorX.Count; j++)
         {
-            newTrap.transform.parent = trapsParent.transform;
-            newTrap.transform.position = spawnPosition;
-        }*/
-
-    }
-    void TrapDestroy()
-    {
-        if (mainCamera != null)
-        {
-            // 현재 오브젝트의 위치를 월드 좌표로 얻음
-            Vector3 objectPosition = this.transform.position;
-
-            // 오브젝트의 화면 위치를 뷰포트 좌표로 변환
-            Vector3 viewportPosition = mainCamera.WorldToViewportPoint(objectPosition);
-            // 오브젝트가 화면 오른쪽 밖에 있는지 확인 (viewportPosition.x > 1.0는 화면 오른쪽 밖을 의미)
-            if (viewportPosition.x < 0.0f)
+            if ((TrapSpawnX[i] > upFloorX[j]-floorBasePosition/2-1.5f) && (TrapSpawnX[i] < upFloorX[j] - floorBasePosition/2 + 3.5f))
             {
-                // 오브젝트의 위치를 x축으로 25만큼 옮김
-                objectPosition.x += 30.0f;
-
-                // 옮긴 위치를 적용
-                transform.position = objectPosition;
+                spawnPosition.y += 1;
+                Debug.Log("x:" + TrapSpawnX[i] + "floorx:" + upFloorX[j]);
             }
         }
+        GameObject newTrap = Instantiate(trapPrefab, spawnPosition, Quaternion.identity);
+        newTrap.transform.parent = this.transform;
+
+
     }
+    void ItemGenerate(int i)
+    {
+        spawnPosition = new Vector3(DropItem[i], FloorY+0.1f, 0.0f);
+
+        for (int j = 0; j < upFloorX.Count; j++)
+        {
+            if ((DropItem[i] > upFloorX[j] + 7.5f) && (DropItem[i] < upFloorX[j] +10.0f))
+            {
+                spawnPosition.y += 1;
+                Debug.Log("x:" + TrapSpawnX[i] + "floorx:" + upFloorX[j]);
+            }
+        }
+        GameObject newItem = Instantiate(ItemPrefab, spawnPosition, Quaternion.identity);
+        newItem.transform.parent = this.transform;
+
+
+    }
+
 }
