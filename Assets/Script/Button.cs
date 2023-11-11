@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
@@ -24,4 +25,5 @@ public class Button : MonoBehaviour
         // 다음 index의 scene 불러오기 (다음 스테이지 불러오기)
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
+
 }
