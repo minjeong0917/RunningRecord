@@ -20,7 +20,7 @@ public class WallCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.instance.GameOver();
+ //           GameManager.instance.GameOver();
         }
     }
 }

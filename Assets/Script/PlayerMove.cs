@@ -87,11 +87,12 @@ public class PlayerMove : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("enemy")) // ???? ???? ??
             OnDamaged();
-
+        /*
         if (collision.gameObject.CompareTag("wall"))
         {
             GameManager.instance.GameOver();
         }
+        */
 
     }
 
