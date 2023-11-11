@@ -7676,7 +7676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d2c8b3725b84ec1bd59592013f52fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trapPrefab: {fileID: 1791882802489356494, guid: 5fc1c7c7399ec49be88985ae644d904a, type: 3}
+  trapPrefab: {fileID: 1791882802489356494, guid: 3bd495c6d83be43579b8a33f9013be14, type: 3}
   dataHandler: {fileID: 371589821}
   ItemPrefab: {fileID: 5212992447124034687, guid: ec5be522616b8458a9b2b85bef2b145b, type: 3}
 --- !u!1 &1567258846
