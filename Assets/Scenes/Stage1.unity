@@ -3539,7 +3539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &631345733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4022,7 +4022,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000012875, y: 212.93646}
-  m_SizeDelta: {x: 817.2347, y: 30.5003}
+  m_SizeDelta: {x: 817.2347, y: 30.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &683711407
 GameObject:
@@ -5656,7 +5656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &955735255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11218,7 +11218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   progresstext: {fileID: 599622795}
   frontprogress: {fileID: 671829876}
-  speed: 25
+  speed: 0.833
 --- !u!114 &1886664365
 MonoBehaviour:
   m_ObjectHideFlags: 0
