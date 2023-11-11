@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 3;
     private int currentLives;
+    public Popup popup;
 
     private void Start()
     {
@@ -33,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
             if (currentLives <= 0)
             {
                 // 라이프가 모두 소진되었을 때
-                GameManager.instance.GameOver();
+                popup.Gameover();
             }
         }
     }
@@ -52,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
 
             if (currentLives >= 3)
             {
-                // 라이프가 모두 소진되었을 때
+                // 라이프가 이미 차있을 때
                 Debug.Log("maxlife over");
             }
         }

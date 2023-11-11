@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     //[SerializeField] GameObject[] goGameUI = null;
-    public GameObject gameover = null;
+
     public static GameManager instance;
     public bool isStartGame = false;
 
@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         instance = this;
-        gameover.SetActive(false);
     }
 
     public void GameStart()
@@ -29,10 +28,4 @@ public class GameManager : MonoBehaviour
         isStartGame = true;
     }
 
-    public void GameOver()
-    {
-        gameover.SetActive(true);
-        isStartGame = false;
-
-    }
 }
