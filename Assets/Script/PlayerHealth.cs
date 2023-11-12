@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 3;
     private int currentLives;
     public Popup popup;
+    public Progress progress;
 
     private void Start()
     {
@@ -35,6 +36,7 @@ public class PlayerHealth : MonoBehaviour
             {
                 // 라이프가 모두 소진되었을 때
                 popup.Gameover();
+                progress.GameOver();
             }
         }
     }
