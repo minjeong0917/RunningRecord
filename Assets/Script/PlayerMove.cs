@@ -67,16 +67,16 @@ public class PlayerMove : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D collision) // ???? 
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ground")) // ???????? ???? ?????? ?? ???? ????
+        if (collision.gameObject.CompareTag("ground"))
         {
             isjumping = false;
         }
         
 
 
-        if (collision.gameObject.CompareTag("start")) // ???? ???? ?????? ???????? ??????!
+        if (collision.gameObject.CompareTag("start"))
         {
             AudioManager.instance.PlayBGM("BGM_1");
         }
