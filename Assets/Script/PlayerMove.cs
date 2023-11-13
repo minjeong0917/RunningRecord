@@ -10,6 +10,8 @@ public class PlayerMove : MonoBehaviour
 
     public Rigidbody2D rigid;
     public SpriteRenderer spriteRenderer;
+    public Popup popup;
+
 
     void Awake()
     {
@@ -56,12 +58,13 @@ public class PlayerMove : MonoBehaviour
                     isjumping = true;
                     rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // ???????? ???? ??
 
-                  
+
                 }
                 else return;
             }
 
         }
+        
 
 
     }
@@ -80,6 +83,13 @@ public class PlayerMove : MonoBehaviour
         {
             AudioManager.instance.PlayBGM("BGM_1");
         }
+
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            popup.GameSuccess();
+
+        }
+
     }
 
 

@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource bgmPlayer = null;
     [SerializeField] AudioSource[] sfxPlayer = null;
 
-    void Start()
+    void Awake()
     {
         instance = this;
     }
@@ -44,9 +44,10 @@ public class AudioManager : MonoBehaviour
         bgmPlayer.Stop();
     }
 
+
     public void PlaySFX(string p_sfxName) // ?????? ????
     {
-        for (int i = 0; i < bgm.Length; i++)
+        for (int i = 0; i < sfx.Length; i++)
         {
             if (p_sfxName == sfx[i].name) // ?????? p_sfxName?? Sound???????? ???? name ???? ???????? ???? 
             {
@@ -66,10 +67,24 @@ public class AudioManager : MonoBehaviour
          Debug.Log(p_sfxName + "?????? ???????? ????????.");
     }
 
+    public void StopSFX(string p_sfxName)
+    {
+        for (int i = 0; i < sfxPlayer.Length; i++)
+        {
+            if (sfxPlayer[i].clip != null && sfxPlayer[i].clip.name == p_sfxName)
+            {
+                sfxPlayer[i].Stop();
+                sfxPlayer[i].clip = null; // 사운드 초기화
+            }
+        }
+    }
+
     public void BGMVolume(float volume) // 볼륨 조절 코드
     {
         bgmPlayer.volume = volume;
     }
+
+   
 
     /*
     public void SFXVolume(float volume)

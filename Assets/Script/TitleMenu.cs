@@ -12,9 +12,11 @@ public class TitleMenu : MonoBehaviour
     public void BtnPlay()
     {
         SceneManager.LoadScene("StageChoice");
+
         /*
         goStageUI.SetActive(true);
         this.gameObject.SetActive(false); // 시작화면 비활성화*/
 
     }
+
 }

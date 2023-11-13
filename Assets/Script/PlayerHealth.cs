@@ -35,8 +35,8 @@ public class PlayerHealth : MonoBehaviour
             if (currentLives <= 0)
             {
                 // 라이프가 모두 소진되었을 때
-                popup.Gameover();
-                progress.GameOver();
+                //popup.Gameover();
+                //progress.GameOver();
             }
         }
     }

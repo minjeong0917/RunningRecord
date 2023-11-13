@@ -26,4 +26,5 @@ public class Button : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
+
 }
