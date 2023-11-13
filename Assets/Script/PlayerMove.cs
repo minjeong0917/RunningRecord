@@ -23,7 +23,11 @@ public class PlayerMove : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
+        popup = GameObject.FindObjectOfType<Popup>();
+        if (popup == null)
+        {
+            Debug.LogError("Popup을 찾을 수 없습니다!");
+        }
     }
 
 

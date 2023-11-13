@@ -12,6 +12,7 @@ public class Popup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FinishPopup.SetActive(false);
         GameoverPopup.SetActive(false);
         GameManager.instance.isStartGame = true;
 
@@ -30,6 +31,8 @@ public class Popup : MonoBehaviour
     {
         FinishPopup.SetActive(true);
         AudioManager.instance.PlaySFX("Success");
+        GameManager.instance.isStartGame = false;
+
 
     }
 }
