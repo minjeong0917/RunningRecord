@@ -65,5 +65,18 @@ public class AudioManager : MonoBehaviour
         }
          Debug.Log(p_sfxName + "?????? ???????? ????????.");
     }
+
+    public void BGMVolume(float volume) // 볼륨 조절 코드
+    {
+        bgmPlayer.volume = volume;
+    }
+
+    /*
+    public void SFXVolume(float volume)
+    {
+        sfxPlayer[].volume = volume;
+    }
+    *
+    */
 }
 
