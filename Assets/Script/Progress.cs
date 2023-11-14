@@ -9,11 +9,12 @@ public class Progress : MonoBehaviour
     public Image frontprogress;
     float currentValue;
     public float speed;
+    
 
 
     private bool isGameProgress = true; // 게임이 진행 중인지를 나타냄
 
-
+    
     void Update()
     {
         if (isGameProgress) // 게임이 진행 중일 때만 진행도를 업데이트
@@ -38,6 +39,11 @@ public class Progress : MonoBehaviour
     public void GameOver()
     {
         isGameProgress = false; // 게임이 종료되었음을 표시
+    }
+
+    public float GetCurrentValue()
+    {
+        return currentValue;
     }
 
 }

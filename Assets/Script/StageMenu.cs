@@ -21,6 +21,8 @@ public class StageMenu : MonoBehaviour
     {
 
         GameManager.instance.GameStart();
+
+
         //this.gameObject.SetActive(false);
     }
 }
