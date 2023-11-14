@@ -9,19 +9,20 @@ public class Progress : MonoBehaviour
     public Image frontprogress;
     float currentValue;
     public float speed;
+    public DataHandler dataHandler;
     
 
 
-    private bool isGameProgress = true; // 게임이 진행 중인지를 나타냄
+    private bool isGameProgress = true; // ?????? ???? ???????? ??????
 
     
     void Update()
     {
-        if (isGameProgress) // 게임이 진행 중일 때만 진행도를 업데이트
+        if (isGameProgress) // ?????? ???? ???? ???? ???????? ????????
         {
             currentValue += speed * Time.deltaTime;
 
-            if (currentValue < 100) // 진행도가 100 이하일 때
+            if (currentValue < 100) // ???????? 100 ?????? ??
             {
                 progresstext.text = ((int)currentValue).ToString() + "%";
             }
@@ -32,13 +33,15 @@ public class Progress : MonoBehaviour
                 isGameProgress = false;
             }
 
-            frontprogress.fillAmount = currentValue / 100;  // 진행도에 따라 진행도 바를 채움
+            frontprogress.fillAmount = currentValue / 100;  // ???????? ???? ?????? ???? ????
         }
     }
 
     public void GameOver()
     {
-        isGameProgress = false; // 게임이 종료되었음을 표시
+        if (currentValue < dataHandler.LoadData("BestProgress")[0])
+            dataHandler.ChangeData("BestProgress", currentValue);
+        isGameProgress = false; // ?????? ???????????? ????
     }
 
     public float GetCurrentValue()
