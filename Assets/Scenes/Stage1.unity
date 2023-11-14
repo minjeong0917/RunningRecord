@@ -4877,7 +4877,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665221006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 530, y: 0, z: 0}
+  m_LocalPosition: {x: 548, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 1011055335}
@@ -13907,6 +13907,7 @@ MonoBehaviour:
   progresstext: {fileID: 599622795}
   frontprogress: {fileID: 671829876}
   speed: 0.833
+  dataHandler: {fileID: 0}
 --- !u!114 &1886664365
 MonoBehaviour:
   m_ObjectHideFlags: 0

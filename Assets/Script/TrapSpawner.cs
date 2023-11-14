@@ -54,11 +54,11 @@ public class TrapSpawner : MonoBehaviour
     }
     void ItemGenerate(int i)
     {
-        spawnPosition = new Vector3(DropItem[i], FloorY+0.1f, 0.0f);
+        spawnPosition = new Vector3(DropItem[i], FloorY+1.1f, 0.0f);
 
         for (int j = 0; j < upFloorX.Count; j++)
         {
-            if ((DropItem[i] > upFloorX[j] + 7.5f) && (DropItem[i] < upFloorX[j] +10.0f))
+            if ((DropItem[i] > upFloorX[j] - floorBasePosition / 2 - 1.5f) && (DropItem[i] < upFloorX[j] - floorBasePosition / 2 + 3.5f))
             {
                 spawnPosition.y += 1;
                 Debug.Log("x:" + TrapSpawnX[i] + "floorx:" + upFloorX[j]);
