@@ -21,6 +21,8 @@ public class DataHandler : MonoBehaviour
         string filePath = Application.dataPath + "/Stages/" + SceneManager.GetActiveScene().name + "/" + Filename + ".txt";
 
         File.WriteAllText(filePath, Value.ToString() + "\n");
+
+        Debug.Log("saveBestProgress");
     }
 
     public List<float> LoadData(string Filename)

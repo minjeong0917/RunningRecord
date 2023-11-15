@@ -16,6 +16,7 @@ public class BestProgress : MonoBehaviour
         bestvalue = dataHandler.LoadData_stage(this.name, "BestProgress")[0];
         if (bestvalue != 0)
         {
+            bestvalue = Mathf.Floor(bestvalue);
             tmp.text = bestvalue.ToString()+"%";
         }
         else
