@@ -39,7 +39,7 @@ public class Progress : MonoBehaviour
 
     public void GameOver()
     {
-        if (currentValue < dataHandler.LoadData("BestProgress")[0])
+        if (currentValue > dataHandler.LoadData("BestProgress")[0])
             dataHandler.ChangeData("BestProgress", currentValue);
         isGameProgress = false; // ?????? ???????????? ????
     }
