@@ -10,7 +10,7 @@ public class Button : MonoBehaviour
 
     public void BtnMenu()
     {
-        SceneManager.LoadScene("StageChoice");
+        SceneManager.LoadScene("StageChoice");  // 스테이지 선택창 Scene 불러오기
     }
 
     public void BtnRetry()
@@ -26,5 +26,13 @@ public class Button : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
+    public void BtnExit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
 
 }

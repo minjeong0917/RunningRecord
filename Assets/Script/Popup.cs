@@ -7,6 +7,7 @@ public class Popup : MonoBehaviour
 {
     public GameObject GameoverPopup = null;
     public GameObject FinishPopup = null;
+    public GameObject PausePopup = null;
     [SerializeField] Text txtProgress = null;
     [SerializeField] Image progressBar;
 
@@ -15,14 +16,41 @@ public class Popup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FinishPopup.SetActive(false);
         GameoverPopup.SetActive(false);
+        FinishPopup.SetActive(false);
+        PausePopup.SetActive(false);
         GameManager.instance.isStartGame = true;
         theProgress = FindObjectOfType<Progress>();        
 
     }
 
     // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause();
+        }
+    }
+
+    void Pause()
+    {
+        PausePopup.SetActive(!PausePopup.activeSelf);
+
+        if (PausePopup.activeSelf)
+        {
+            Time.timeScale = 0f;
+            AudioManager.instance.StopBGM();
+
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            // AudioManager.instance.ResumeBGM();
+
+        }
+    }
+
     public void Gameover()
     {
         GameoverPopup.SetActive(true);

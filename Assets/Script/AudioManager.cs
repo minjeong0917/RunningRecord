@@ -12,7 +12,7 @@ public class Sound
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance; // ???? ???????? ???? ?? ?? ?????? ?????????? instace?? ????..?
+    public static AudioManager instance;
 
     [SerializeField] Sound[] sfx = null;
     [SerializeField] Sound[] bgm = null;
@@ -79,19 +79,18 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void BGMVolume(float volume) // 볼륨 조절 코드
+    public void BGMVolume(float volume)
     {
         bgmPlayer.volume = volume;
     }
 
-   
 
-    /*
     public void SFXVolume(float volume)
     {
-        sfxPlayer[].volume = volume;
+        for (int i = 0; i < sfxPlayer.Length; i++)
+        {
+            sfxPlayer[i].volume = volume;
+        }
     }
-    *
-    */
 }
 
