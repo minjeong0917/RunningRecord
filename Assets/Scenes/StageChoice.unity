@@ -559,7 +559,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A Sitar Story
+  m_text: Rains Of Meghalaya
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: db50db727fa60044091b8a506f53f2af, type: 2}
   m_sharedMaterial: {fileID: 8478713993772068225, guid: db50db727fa60044091b8a506f53f2af, type: 2}
@@ -586,8 +586,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -3.0369241, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1289,7 +1289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b491fdccd72309948b6b07be24f899bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStartGame: 0
 --- !u!1 &1413648772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,7 +1561,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2863de47f2f66f34f846eb3ab5194bff, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15c718ec5e64cd24cbaa782f10f47e73, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
