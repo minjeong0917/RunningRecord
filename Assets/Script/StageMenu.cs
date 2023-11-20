@@ -8,6 +8,9 @@ public class StageMenu : MonoBehaviour
 {
     //[SerializeField] GameObject TitleMenu = null;
 
+
+
+
     public void BtnBack()
     {
         /*
@@ -17,12 +20,28 @@ public class StageMenu : MonoBehaviour
 
     }
 
-    public void BtnPlay()
+    public void BtnPlayStage1()
     {
+        // 이 버튼을 통해 스테이지 1로 이동
+        Time.timeScale = 1f;
+        LoadingController.LoadScene("Stage1");
+        GameManager.instance.isStartGame = true;
+        //GameManager.instance.GameStart();
 
-        GameManager.instance.GameStart();
+
+    }
+
+    public void BtnPlayStage2()
+    {
+        Time.timeScale = 1f;
+
+        //SceneManager.LoadScene("LoadingScene");
+        LoadingController.LoadScene("Stage2");
+
+        GameManager.instance.isStartGame = true;
+
+        //GameManager.instance.GameStart();
 
 
-        //this.gameObject.SetActive(false);
     }
 }

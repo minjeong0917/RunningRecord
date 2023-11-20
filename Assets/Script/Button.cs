@@ -11,6 +11,7 @@ public class Button : MonoBehaviour
     public void BtnMenu()
     {
         SceneManager.LoadScene("StageChoice");  // 스테이지 선택창 Scene 불러오기
+        GameManager.instance.isStartGame = false;
     }
 
     public void BtnRetry()

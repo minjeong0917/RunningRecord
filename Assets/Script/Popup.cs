@@ -39,8 +39,8 @@ public class Popup : MonoBehaviour
 
         if (PausePopup.activeSelf)
         {
-            Time.timeScale = 0f;
-            AudioManager.instance.StopBGM();
+            Time.timeScale = 0f; // 이게 1이면 움직임...!
+            //AudioManager.instance.StopBGM();
 
         }
         else

@@ -9,6 +9,8 @@ TagManager:
   - enemy
   - wall
   - item
+  - start_stage1
+  - start_stage2
   layers:
   - Default
   - TransparentFX

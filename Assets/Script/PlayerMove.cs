@@ -83,9 +83,14 @@ public class PlayerMove : MonoBehaviour
         
 
 
-        if (collision.gameObject.CompareTag("start"))
+        if (collision.gameObject.CompareTag("start_stage1"))
         {
             AudioManager.instance.PlayBGM("BGM_1");
+        }
+
+        if (collision.gameObject.CompareTag("start_stage2"))
+        {
+            AudioManager.instance.PlayBGM("BGM_2");
         }
 
         if (collision.gameObject.CompareTag("Finish"))
