@@ -11436,6 +11436,8 @@ MonoBehaviour:
   PausePopup: {fileID: 1762213019}
   txtProgress: {fileID: 1851378740}
   progressBar: {fileID: 707890322}
+  Pause_txtProgress: {fileID: 174526143}
+  Pause_progressBar: {fileID: 1101162617}
 --- !u!4 &1453485380
 Transform:
   m_ObjectHideFlags: 0

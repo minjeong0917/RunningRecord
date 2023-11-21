@@ -19,7 +19,7 @@ public class Progress : MonoBehaviour
         {
             currentValue += speed * Time.deltaTime;
 
-            if (currentValue < 100)   // 시간에 따른 진행도의 퍼센트를 나타냄
+            if (currentValue < 100)   // ?????? ???? ???????? ???????? ??????
             {
                 progresstext.text = ((int)currentValue).ToString() + "%";
             }
@@ -30,7 +30,7 @@ public class Progress : MonoBehaviour
                 isGameProgress = false;
             }
 
-            frontprogress.fillAmount = currentValue / 100;  // 진행도에 따라 진행도 바를 채움
+            frontprogress.fillAmount = currentValue / 100;  // ???????? ???? ?????? ???? ????
         }
     }
 
@@ -38,6 +38,11 @@ public class Progress : MonoBehaviour
     {
         if (currentValue > dataHandler.LoadData("BestProgress")[0])
             dataHandler.ChangeData("BestProgress", currentValue);
+        isGameProgress = false;
+    }
+    public void Finish()
+    {
+        dataHandler.ChangeData("BestProgress", 100);
         isGameProgress = false;
     }
 

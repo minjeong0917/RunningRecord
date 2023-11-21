@@ -10,6 +10,9 @@ public class Popup : MonoBehaviour
     public GameObject PausePopup = null;
     [SerializeField] Text txtProgress = null;
     [SerializeField] Image progressBar;
+    [SerializeField] Text Pause_txtProgress = null;
+    [SerializeField] Image Pause_progressBar;
+    public DataHandler dataHandler;
 
     Progress theProgress;
 
@@ -21,7 +24,7 @@ public class Popup : MonoBehaviour
         PausePopup.SetActive(false);
         GameManager.instance.isStartGame = true;
         theProgress = FindObjectOfType<Progress>();        
-
+        
     }
 
     // Update is called once per frame
@@ -36,10 +39,16 @@ public class Popup : MonoBehaviour
     void Pause()
     {
         PausePopup.SetActive(!PausePopup.activeSelf);
+        
+        float bestProgress = dataHandler.LoadData("BestProgress")[0];
+        if (bestProgress < theProgress.GetCurrentValue())
+            bestProgress = theProgress.GetCurrentValue();
+        Pause_progressBar.fillAmount =  bestProgress/ 100.0f;
 
+        Pause_txtProgress.text = string.Format("{0:#,##0}%", bestProgress);
         if (PausePopup.activeSelf)
         {
-            Time.timeScale = 0f; // 이게 1이면 움직임...!
+            Time.timeScale = 0f; // ???? 1???? ??????...!
             //AudioManager.instance.StopBGM();
 
         }
