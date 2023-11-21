@@ -20,6 +20,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource bgmPlayer = null;
     [SerializeField] AudioSource[] sfxPlayer = null;
 
+    private bool isBGMPaused = false;
+
     void Awake()
     {
         instance = this;
@@ -38,12 +40,28 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-
     public void StopBGM() // ?????? ????
     {
         bgmPlayer.Stop();
     }
 
+    public void PauseBGM()
+    {
+        if (bgmPlayer.isPlaying)
+        {
+            bgmPlayer.Pause();
+            isBGMPaused = true;
+        }
+    }
+
+    public void ResumeBGM()
+    {
+        if (isBGMPaused)
+        {
+            bgmPlayer.UnPause();
+            isBGMPaused = false;
+        }
+    }
 
     public void PlaySFX(string p_sfxName) // ?????? ????
     {

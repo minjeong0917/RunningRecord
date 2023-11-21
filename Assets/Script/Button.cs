@@ -27,6 +27,13 @@ public class Button : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
+    public void BtnResume()
+    {
+        Time.timeScale = 1f;
+        AudioManager.instance.ResumeBGM();
+    }
+
+
     public void BtnExit()
     {
 #if UNITY_EDITOR

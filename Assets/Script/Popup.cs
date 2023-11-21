@@ -39,25 +39,27 @@ public class Popup : MonoBehaviour
     void Pause()
     {
         PausePopup.SetActive(!PausePopup.activeSelf);
-        
+
+        if (PausePopup.activeSelf)
+        {
+            Time.timeScale = 0f;
+            AudioManager.instance.PauseBGM();
+        }
+
+        else
+        {
+            Time.timeScale = 1f;
+            AudioManager.instance.ResumeBGM();
+        }
+
         float bestProgress = dataHandler.LoadData("BestProgress")[0];
         if (bestProgress < theProgress.GetCurrentValue())
             bestProgress = theProgress.GetCurrentValue();
         Pause_progressBar.fillAmount =  bestProgress/ 100.0f;
 
         Pause_txtProgress.text = string.Format("{0:#,##0}%", bestProgress);
-        if (PausePopup.activeSelf)
-        {
-            Time.timeScale = 0f; // ???? 1???? ??????...!
-            //AudioManager.instance.StopBGM();
 
-        }
-        else
-        {
-            Time.timeScale = 1f;
-            // AudioManager.instance.ResumeBGM();
 
-        }
     }
 
     public void Gameover()
