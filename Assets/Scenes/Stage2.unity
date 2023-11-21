@@ -620,9 +620,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataHandler: {fileID: 56876586}
-  isMakeTrap: 0
-  isMakeMap: 0
-  isMakeItem: 0
+  isMakeTrap: 1
+  isMakeMap: 1
+  isMakeItem: 1
 --- !u!70 &56876588
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
