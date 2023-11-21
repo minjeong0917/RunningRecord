@@ -2422,6 +2422,7 @@ GameObject:
   - component: {fileID: 371589817}
   - component: {fileID: 371589821}
   - component: {fileID: 371589822}
+  - component: {fileID: 371589823}
   m_Layer: 6
   m_Name: CD_1
   m_TagString: Player
@@ -2577,6 +2578,24 @@ MonoBehaviour:
   isMakeTrap: 0
   isMakeMap: 0
   isMakeItem: 0
+--- !u!114 &371589823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371589815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91970e143ff894b48b0fb55326a7db32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 1588659030}
+  sprites:
+  - {fileID: 21300000, guid: d969c4a6eddfb9943a17094661584cf7, type: 3}
+  - {fileID: -8345889219430918527, guid: 99bd3393cf23f384da4dcd106f851f34, type: 3}
+  - {fileID: 6463996231757241079, guid: 99bd3393cf23f384da4dcd106f851f34, type: 3}
+  - {fileID: -4971093369444956449, guid: 99bd3393cf23f384da4dcd106f851f34, type: 3}
 --- !u!1 &390621161
 GameObject:
   m_ObjectHideFlags: 0
@@ -7027,6 +7046,7 @@ MonoBehaviour:
   progressBar: {fileID: 992092347}
   Pause_txtProgress: {fileID: 55597967}
   Pause_progressBar: {fileID: 471776429}
+  dataHandler: {fileID: 0}
 --- !u!4 &955735256
 Transform:
   m_ObjectHideFlags: 0
@@ -11097,6 +11117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  currentLives: 0
   popup: {fileID: 955735255}
   progress: {fileID: 1886664364}
 --- !u!1 &1597152242

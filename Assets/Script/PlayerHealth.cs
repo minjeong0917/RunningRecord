@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 3;
-    private int currentLives;
+    public int currentLives;
     public Popup popup;
     public Progress progress;
 

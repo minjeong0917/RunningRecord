@@ -496,6 +496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  currentLives: 0
   popup: {fileID: 1453485379}
   progress: {fileID: 336719319}
 --- !u!1 &42863625
@@ -588,6 +589,7 @@ GameObject:
   - component: {fileID: 56876588}
   - component: {fileID: 56876586}
   - component: {fileID: 56876587}
+  - component: {fileID: 56876593}
   m_Layer: 6
   m_Name: CD_1
   m_TagString: Player
@@ -743,6 +745,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &56876593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56876585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91970e143ff894b48b0fb55326a7db32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 40129975}
+  sprites:
+  - {fileID: 21300000, guid: d969c4a6eddfb9943a17094661584cf7, type: 3}
+  - {fileID: -8345889219430918527, guid: 99bd3393cf23f384da4dcd106f851f34, type: 3}
+  - {fileID: 6463996231757241079, guid: 99bd3393cf23f384da4dcd106f851f34, type: 3}
+  - {fileID: -4971093369444956449, guid: 99bd3393cf23f384da4dcd106f851f34, type: 3}
 --- !u!1 &73090430
 GameObject:
   m_ObjectHideFlags: 0
