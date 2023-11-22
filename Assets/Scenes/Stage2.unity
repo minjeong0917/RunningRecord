@@ -11672,6 +11672,7 @@ GameObject:
   - component: {fileID: 1453485380}
   - component: {fileID: 1453485379}
   - component: {fileID: 1453485378}
+  - component: {fileID: 1453485381}
   m_Layer: 0
   m_Name: PopupManager
   m_TagString: Untagged
@@ -11729,6 +11730,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1453485381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453485377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23deca215d6cc31429ba1ad872e12a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmSlider: {fileID: 959675004}
+  sfxSlider: {fileID: 2075870808}
 --- !u!1 &1460797023
 GameObject:
   m_ObjectHideFlags: 0

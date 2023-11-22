@@ -22,6 +22,24 @@ public class AudioManager : MonoBehaviour
 
     private bool isBGMPaused = false;
 
+    void Start()
+    {
+        // 저장된 볼륨 값이 있는지 확인하고, 없으면 기본 값 설정
+        if (!PlayerPrefs.HasKey("BGMVolume"))
+        {
+            PlayerPrefs.SetFloat("BGMVolume", 1.0f);
+        }
+
+        if (!PlayerPrefs.HasKey("SFXVolume"))
+        {
+            PlayerPrefs.SetFloat("SFXVolume", 1.0f);
+        }
+
+        // 불러온 볼륨 값을 적용
+        BGMVolume(PlayerPrefs.GetFloat("BGMVolume"));
+        SFXVolume(PlayerPrefs.GetFloat("SFXVolume"));
+    }
+
     void Awake()
     {
         instance = this;

@@ -7020,6 +7020,7 @@ GameObject:
   - component: {fileID: 955735256}
   - component: {fileID: 955735255}
   - component: {fileID: 955735257}
+  - component: {fileID: 955735258}
   m_Layer: 0
   m_Name: PopupManager
   m_TagString: Untagged
@@ -7077,6 +7078,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b0a89cf972be6489981c176bfd6d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &955735258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955735254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23deca215d6cc31429ba1ad872e12a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmSlider: {fileID: 1559899192}
+  sfxSlider: {fileID: 790506554}
 --- !u!1 &980770416
 GameObject:
   m_ObjectHideFlags: 0

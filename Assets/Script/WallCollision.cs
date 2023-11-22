@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class WallCollision : MonoBehaviour
 {
+    public Popup popup;
+    public Progress progress;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,8 @@ public class WallCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
- //           GameManager.instance.GameOver();
+            popup.Gameover();
+            progress.GameOver();
         }
     }
 }
