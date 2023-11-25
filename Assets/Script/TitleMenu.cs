@@ -11,11 +11,20 @@ public class TitleMenu : MonoBehaviour
 
     public void BtnPlay()
     {
-        SceneManager.LoadScene("StageChoice");
+        PlayerPrefs.SetInt("needTutorial", 0);//?? ??? ???????
+
+        if (PlayerPrefs.GetInt("needTutorial")==0)
+        {
+
+            PlayerPrefs.SetInt("needTutorial", 1);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene("Tutorial");
+        }else if(PlayerPrefs.GetInt("needTutorial") == 1)
+            SceneManager.LoadScene("StageChoice");
 
         /*
         goStageUI.SetActive(true);
-        this.gameObject.SetActive(false); // 시작화면 비활성화*/
+        this.gameObject.SetActive(false); // ???????? ????????*/
 
     }
 

@@ -3357,6 +3357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc27ab3a20c7b4805a9be9a950c35a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popup: {fileID: 955735255}
+  progress: {fileID: 1886664364}
 --- !u!68 &456538073
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -6226,11 +6228,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892834648}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc27ab3a20c7b4805a9be9a950c35a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popup: {fileID: 955735255}
+  progress: {fileID: 1886664364}
 --- !u!68 &892834651
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -8806,6 +8810,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc27ab3a20c7b4805a9be9a950c35a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popup: {fileID: 955735255}
+  progress: {fileID: 1886664364}
 --- !u!68 &1210911157
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -9382,6 +9388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc27ab3a20c7b4805a9be9a950c35a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popup: {fileID: 955735255}
+  progress: {fileID: 1886664364}
 --- !u!68 &1307755445
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -11336,6 +11344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc27ab3a20c7b4805a9be9a950c35a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popup: {fileID: 955735255}
+  progress: {fileID: 1886664364}
 --- !u!68 &1603764853
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -12759,6 +12769,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc27ab3a20c7b4805a9be9a950c35a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popup: {fileID: 955735255}
+  progress: {fileID: 1886664364}
 --- !u!68 &1695334864
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -14412,6 +14424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc27ab3a20c7b4805a9be9a950c35a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popup: {fileID: 955735255}
+  progress: {fileID: 1886664364}
 --- !u!68 &1932765668
 EdgeCollider2D:
   m_ObjectHideFlags: 0

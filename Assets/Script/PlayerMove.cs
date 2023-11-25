@@ -26,7 +26,7 @@ public class PlayerMove : MonoBehaviour
         popup = GameObject.FindObjectOfType<Popup>();
         if (popup == null)
         {
-            Debug.LogError("Popup을 찾을 수 없습니다!");
+            Debug.LogError("Popup?? ???? ?? ????????!");
         }
     }
 
