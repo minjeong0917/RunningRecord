@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1791882802489356494
+--- !u!1 &2160083748172303981
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1791882802489356489}
-  - component: {fileID: 1791882802489356488}
-  - component: {fileID: 1791882802489356490}
-  - component: {fileID: 1791882802489356491}
-  - component: {fileID: 1791882802489356485}
+  - component: {fileID: 2160083748172303978}
+  - component: {fileID: 2160083748172303979}
+  - component: {fileID: 2160083748172303977}
+  - component: {fileID: 2160083748172303976}
+  - component: {fileID: 2160083748172303974}
   m_Layer: 7
-  m_Name: Trap04
+  m_Name: Trap05
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1791882802489356489
+--- !u!4 &2160083748172303978
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791882802489356494}
+  m_GameObject: {fileID: 2160083748172303981}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1.5, z: 3.4824107}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
@@ -34,13 +34,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1791882802489356488
+--- !u!212 &2160083748172303979
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791882802489356494}
+  m_GameObject: {fileID: 2160083748172303981}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 670ee1b3e8c0c064fb309f437476d353, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65dcdedb475178044a9f8f36b7f57d2e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,13 +85,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &1791882802489356490
+--- !u!60 &2160083748172303977
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791882802489356494}
+  m_GameObject: {fileID: 2160083748172303981}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -102,7 +102,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6666667, y: 0.6666667}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.6666667, y: 0.6666667}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -116,14 +116,14 @@ PolygonCollider2D:
       - {x: 0.33333334, y: -0.33333334}
       - {x: 0.33630762, y: -0.20227306}
       - {x: 0.05956769, y: 0.33630762}
---- !u!50 &1791882802489356491
+--- !u!50 &2160083748172303976
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791882802489356494}
+  m_GameObject: {fileID: 2160083748172303981}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -137,16 +137,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1791882802489356485
+--- !u!114 &2160083748172303974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791882802489356494}
+  m_GameObject: {fileID: 2160083748172303981}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 320c2910d00614a31b486538ad64b100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigid: {fileID: 1791882802489356491}
+  rigid: {fileID: 2160083748172303976}
