@@ -56,7 +56,7 @@ public class PlayerHealth : MonoBehaviour
             if (currentLives >= 3)
             {
                 // 라이프가 이미 차있을 때
-                Debug.Log("maxlife over");
+                currentLives = 3;
             }
         }
     }

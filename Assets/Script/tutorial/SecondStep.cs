@@ -24,29 +24,35 @@ public class SecondStep : MonoBehaviour
         {
             if(set == false)
             {
-                
-                transform.Translate(Vector3.up);
-                tmp.text = "발판의 높이 변화에 맞추어 점프하세요!";//텍스트 변경
-                set = true;
-                StartCoroutine(ChangeTitleAfterDelay());
+                if (transform.position.x > 18f)
+                {
+                    transform.Translate(Vector3.up);
+                    tmp.text = "발판의 높이 변화에 맞추어 점프하세요!";//텍스트 변경
+                    set = true;
+                    StartCoroutine(ChangeTitleAfterDelay());
+                }
             }
-            if (transform.position.x-2.5f > player.transform.position.x + 0.5f)
+            if (transform.position.x > 18f)
             {
                 isclear = true;
             }
-            Debug.Log(this.transform.position.x);
             if (transform.position.x < player.transform.position.x - 0.5f)
             {
                 if (isclear)
                 {
-
+                    isclear = false;
                     tmp.text = "잘하셨습니다!";//텍스트 변경
-                    PlayerPrefs.SetInt("Step", 3);
                     transform.Translate(Vector3.down);
+                    Invoke("NextStep", 1f);
                 }
             }
 
         }
+    }
+
+    void NextStep()
+    {
+        PlayerPrefs.SetInt("Step", 3);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
