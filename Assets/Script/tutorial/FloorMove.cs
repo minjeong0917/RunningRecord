@@ -7,7 +7,7 @@ public class FloorMove : MonoBehaviour
 
     Camera mainCamera;
     private float speed = 4.5f;
-
+    public SecondStep secondstep;
 
 
     // Start is called before the first frame update
@@ -23,8 +23,9 @@ public class FloorMove : MonoBehaviour
         float h = -1.0f;
 
         h = h * speed * Time.deltaTime;
+        
         transform.Translate(Vector3.right * h);
-
+       
 
         if (mainCamera != null)
         {
@@ -38,9 +39,11 @@ public class FloorMove : MonoBehaviour
                 // 오브젝트의 위치를 x축으로 이동
                 objectPosition.x = objectPosition.x + 25.0f;
                 transform.position = objectPosition;
+                
 
             }
         }
     }
+
 
 }

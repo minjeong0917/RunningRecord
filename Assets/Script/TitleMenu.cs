@@ -7,7 +7,12 @@ using UnityEngine.SceneManagement;
 public class TitleMenu : MonoBehaviour
 {
 
+    public GameObject TutorialPopup;
     //[SerializeField] GameObject goStageUI = null;
+    private void Start()
+    {
+        TutorialPopup.SetActive(false);
+    }
 
     public void BtnPlay()
     {
@@ -18,7 +23,7 @@ public class TitleMenu : MonoBehaviour
 
             PlayerPrefs.SetInt("needTutorial", 1);
             PlayerPrefs.Save();
-            SceneManager.LoadScene("Tutorial");
+            TutorialPopup.SetActive(true);
         }else if(PlayerPrefs.GetInt("needTutorial") == 1)
             SceneManager.LoadScene("StageChoice");
 
