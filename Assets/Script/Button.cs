@@ -10,20 +10,20 @@ public class Button : MonoBehaviour
 
     public void BtnMenu()
     {
-        SceneManager.LoadScene("StageChoice");  // 스테이지 선택창 Scene 불러오기
+        SceneManager.LoadScene("StageChoice");  // ???????? ?????? Scene ????????
         GameManager.instance.isStartGame = false;
     }
 
     public void BtnRetry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // 현재의 Scene 불러오기
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // ?????? Scene ????????
     }
 
     public void BtnNext()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
-        // 다음 index의 scene 불러오기 (다음 스테이지 불러오기)
+        // ???? index?? scene ???????? (???? ???????? ????????)
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
@@ -41,6 +41,10 @@ public class Button : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+    public void BtnTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
     }
 
 }

@@ -92,4 +92,5 @@ public class Popup : MonoBehaviour
         txtProgress.text = string.Format("{0:#,##0}%", t_currentProgress);
 
     }
+
 }
