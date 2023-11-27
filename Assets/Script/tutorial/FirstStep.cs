@@ -8,11 +8,11 @@ public class FirstStep : MonoBehaviour
     public Camera mainCamera;
     public float speed;
     public float delay;
-    //스텝1: 장애물 하나를 뛰어넘기
-    public GameObject health;
+    public PlayerHealth health;
     public TextMeshPro tmp;
     public TextMeshPro title;
 
+    //스텝1: 장애물 하나를 뛰어넘기
     private void Start()
     {
         PlayerPrefs.SetInt("Step", 1);
@@ -32,25 +32,9 @@ public class FirstStep : MonoBehaviour
 
             if (mainCamera != null)
             {
-<<<<<<< Updated upstream
                 Vector3 objectPosition = this.transform.position;
-                Vector3 rightEndPosition = transform.position + transform.right * (transform.localScale.x / 2);
-=======
-                
-                
-                if (health.GetComponent<PlayerHealth>().currentLives == 3)
-                {
-                    tmp.text = "잘하셨습니다!";
-                }
-                else
-                {
-                    health.GetComponent<PlayerHealth>().GetLife();
-                    objectPosition.x = objectPosition.x + delay;
-                    transform.position = objectPosition;
-                }
->>>>>>> Stashed changes
-
-                Vector3 leftEdge = Camera.main.ViewportToWorldPoint(new Vector3(0.2f, 0.5f, 0));
+                Vector3 rightEndPosition = transform.position + transform.right * (transform.localScale.x);
+                Vector3 leftEdge = Camera.main.ViewportToWorldPoint(new Vector3(0, 0.5f, 0));
 
 
                 if (rightEndPosition.x < leftEdge.x)
@@ -59,21 +43,26 @@ public class FirstStep : MonoBehaviour
                     objectPosition.x = objectPosition.x + delay;
                     transform.position = objectPosition;
 
-                    if (health.GetComponent<PlayerHealth>().currentLives == 3)
+                    if (health.currentLives == 3)
                     {//장애물을 통과했는데 라이프를 잃지 않았다면
                         tmp.text = "잘하셨습니다!";//텍스트 변경
-                        PlayerPrefs.SetInt("Step", 2);
+                        this.gameObject.SetActive(false);
+                        Invoke("NextStep", 1f);
                         
                     }
                     else
                     {
-                        health.GetComponent<PlayerHealth>().GetLife();
+                        health.GetLife();
                         //라이프 복구
                     }
 
                 }
             }
         }
+    }
+    void NextStep()
+    {
+        PlayerPrefs.SetInt("Step", 2);
     }
     IEnumerator ChangeTitleAfterDelay()
     {
