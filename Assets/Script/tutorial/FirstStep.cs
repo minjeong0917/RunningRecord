@@ -32,8 +32,23 @@ public class FirstStep : MonoBehaviour
 
             if (mainCamera != null)
             {
+<<<<<<< Updated upstream
                 Vector3 objectPosition = this.transform.position;
                 Vector3 rightEndPosition = transform.position + transform.right * (transform.localScale.x / 2);
+=======
+                
+                
+                if (health.GetComponent<PlayerHealth>().currentLives == 3)
+                {
+                    tmp.text = "잘하셨습니다!";
+                }
+                else
+                {
+                    health.GetComponent<PlayerHealth>().GetLife();
+                    objectPosition.x = objectPosition.x + delay;
+                    transform.position = objectPosition;
+                }
+>>>>>>> Stashed changes
 
                 Vector3 leftEdge = Camera.main.ViewportToWorldPoint(new Vector3(0.2f, 0.5f, 0));
 
