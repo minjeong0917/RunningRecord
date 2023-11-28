@@ -30,25 +30,17 @@ public class PlayerJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigid.gravityScale = 6; // ???? ???? ?? ??????????
-
+        rigid.gravityScale = 6;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (isjumping == false) 
             {
                 isjumping = true;
-                rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // ???????? ???? ??
-
-
+                rigid.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
             else return;
-          
-
         }
-        
-
-
     }
 
 

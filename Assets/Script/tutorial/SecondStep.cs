@@ -19,7 +19,6 @@ public class SecondStep : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        title.gameObject.SetActive(true);
         if (PlayerPrefs.GetInt("Step") == 2)
         {
             if(set == false)

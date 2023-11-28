@@ -29,11 +29,10 @@ public class ThirdStep : MonoBehaviour
                 loopStart = false;
                 tmp.text = "타이밍에 맞게 점프하여 아이템을 얻어보세요";
                 health.TakeDamage();
+                StartCoroutine(ChangeTitleAfterDelay());
             }
             else
             {
-
-
                 //아이템 이동 코드
                 float h = -1.0f;
 
@@ -47,17 +46,12 @@ public class ThirdStep : MonoBehaviour
                     Vector3 rightEndPosition = transform.position + transform.right * (transform.localScale.x);
                     Vector3 leftEdge = Camera.main.ViewportToWorldPoint(new Vector3(0, 0.5f, 0));
 
-
                     if (rightEndPosition.x < leftEdge.x)
                     {
-
                         objectPosition.x = objectPosition.x + delay;
                         transform.position = objectPosition;
-
-
                     }
                 }
-
             }
         }
     }
@@ -68,6 +62,7 @@ public class ThirdStep : MonoBehaviour
     }
     IEnumerator ChangeTitleAfterDelay()
     {
+        title.enabled = true;
         yield return new WaitForSeconds(1f); // 2초 대기
         title.enabled = false; // 오브젝트 비활성화
         title.text = "Step 4\n실전 플레이해보기"; // 텍스트 미리 변경
