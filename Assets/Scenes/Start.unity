@@ -1162,7 +1162,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1869468496}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: BtnNext
+        m_MethodName: BtnMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1862,7 +1862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1869468492
 MonoBehaviour:
   m_ObjectHideFlags: 0

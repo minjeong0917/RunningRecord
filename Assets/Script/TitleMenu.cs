@@ -12,11 +12,12 @@ public class TitleMenu : MonoBehaviour
     private void Start()
     {
         TutorialPopup.SetActive(false);
+        //PlayerPrefs.SetInt("needTutorial", 0);
+        //PlayerPrefs.Save();
     }
 
     public void BtnPlay()
     {
-        PlayerPrefs.SetInt("needTutorial", 0);//?? ??? ???????
 
         if (PlayerPrefs.GetInt("needTutorial")==0)
         {
