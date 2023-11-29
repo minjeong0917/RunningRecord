@@ -44,7 +44,7 @@ public class Button : MonoBehaviour
     }
     public void BtnTutorial()
     {
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("Story");
     }
 
 }
