@@ -19,15 +19,15 @@ public class Progress : MonoBehaviour
         {
             currentValue += speed * Time.deltaTime;
 
-            if (currentValue < 100)   // ?????? ???? ???????? ???????? ??????
+            if (currentValue < 99)   // ?????? ???? ???????? ???????? ??????
             {
                 progresstext.text = ((int)currentValue).ToString() + "%";
             }
             else
             {
-                currentValue = 100;
-                progresstext.text = "100%!";
+                progresstext.text = "100%";
                 isGameProgress = false;
+                Finish();
             }
 
             frontprogress.fillAmount = currentValue / 100;  // ???????? ???? ?????? ???? ????
@@ -38,7 +38,7 @@ public class Progress : MonoBehaviour
     {
         if (currentValue > dataHandler.LoadData("BestProgress")[0])
             dataHandler.ChangeData("BestProgress", currentValue);
-        isGameProgress = false;
+            isGameProgress = false;
     }
     public void Finish()
     {
