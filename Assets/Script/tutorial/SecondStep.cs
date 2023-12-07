@@ -40,6 +40,7 @@ public class SecondStep : MonoBehaviour
                 if (isclear)
                 {
                     isclear = false;
+                    AudioManager.instance.PlaySFX("Sucess2");
                     tmp.text = "잘하셨습니다!";//텍스트 변경
                     transform.Translate(Vector3.down);
                     Invoke("NextStep", 1f);

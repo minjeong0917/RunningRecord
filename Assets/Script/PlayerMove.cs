@@ -93,6 +93,7 @@ public class PlayerMove : MonoBehaviour
             AudioManager.instance.PlayBGM("BGM_2");
         }
 
+
         if (collision.gameObject.CompareTag("Finish"))
         {
             popup.GameSuccess();

@@ -59,8 +59,14 @@ public class PlayerJump : MonoBehaviour
         {
             isjumping = false;
         }
+        if (collision.gameObject.CompareTag("Clap"))
+        {
+            AudioManager.instance.PlaySFX("Clap");
+        }
+
+
     }
-        public void OnDamaged()
+    public void OnDamaged()
     {
         gameObject.layer = 8; // ???? ?????? ?????? ???????? ????
         spriteRenderer.color = new Color(1, 1, 1, 0.4f); // ??????????

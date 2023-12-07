@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 59151381}
   m_Layer: 0
   m_Name: Floor_3
-  m_TagString: ground
+  m_TagString: Clap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -991,7 +991,7 @@ GameObject:
   - component: {fileID: 150822248}
   m_Layer: 0
   m_Name: Floor_4
-  m_TagString: ground
+  m_TagString: Clap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1254,7 +1254,7 @@ GameObject:
   - component: {fileID: 245166963}
   m_Layer: 0
   m_Name: Floor_2
-  m_TagString: ground
+  m_TagString: Clap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1767,7 +1767,7 @@ GameObject:
   - component: {fileID: 509400952}
   m_Layer: 0
   m_Name: Floor_2
-  m_TagString: ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1876,7 +1876,7 @@ GameObject:
   - component: {fileID: 551902900}
   m_Layer: 0
   m_Name: Floor_1
-  m_TagString: ground
+  m_TagString: Clap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2203,7 +2203,7 @@ GameObject:
   - component: {fileID: 619662348}
   m_Layer: 0
   m_Name: Floor_4
-  m_TagString: ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2890,7 +2890,7 @@ GameObject:
   - component: {fileID: 850514516}
   m_Layer: 0
   m_Name: Floor_0
-  m_TagString: ground
+  m_TagString: Clap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3536,7 +3536,7 @@ GameObject:
   - component: {fileID: 1049267057}
   m_Layer: 0
   m_Name: Floor_2
-  m_TagString: ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3645,7 +3645,7 @@ GameObject:
   - component: {fileID: 1065296356}
   m_Layer: 0
   m_Name: Floor_4
-  m_TagString: ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4757,7 +4757,7 @@ GameObject:
   - component: {fileID: 1320277876}
   m_Layer: 0
   m_Name: Floor_4
-  m_TagString: ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5302,7 +5302,7 @@ GameObject:
   - component: {fileID: 1416725961}
   m_Layer: 0
   m_Name: Floor_0
-  m_TagString: ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5411,7 +5411,7 @@ GameObject:
   - component: {fileID: 1422866030}
   m_Layer: 0
   m_Name: Floor_3
-  m_TagString: ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6098,7 +6098,7 @@ GameObject:
   - component: {fileID: 1631628780}
   m_Layer: 0
   m_Name: Floor_1
-  m_TagString: ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6425,7 +6425,7 @@ GameObject:
   - component: {fileID: 1735222192}
   m_Layer: 0
   m_Name: Floor_3
-  m_TagString: ground
+  m_TagString: Clap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6752,7 +6752,7 @@ GameObject:
   - component: {fileID: 1766801829}
   m_Layer: 0
   m_Name: Floor_1
-  m_TagString: ground
+  m_TagString: Clap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6861,7 +6861,7 @@ GameObject:
   - component: {fileID: 1770558404}
   m_Layer: 0
   m_Name: Floor_0
-  m_TagString: ground
+  m_TagString: Clap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7161,7 +7161,7 @@ GameObject:
   - component: {fileID: 1883616682}
   m_Layer: 0
   m_Name: Floor_0
-  m_TagString: ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7577,7 +7577,7 @@ GameObject:
   - component: {fileID: 2042356509}
   m_Layer: 0
   m_Name: Floor_3
-  m_TagString: ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7866,8 +7866,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 300
-  m_fontSizeBase: 300
+  m_fontSize: 280
+  m_fontSizeBase: 280
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8096,6 +8096,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 9db9fe77f7485654e988dc8a5beb8ef1, type: 3}
   - name: fail
     clip: {fileID: 8300000, guid: 9d84c78bca784f2459cae90b495bcd10, type: 3}
+  - name: Clap
+    clip: {fileID: 8300000, guid: c5f0e8032ef902f44a0ea15c59516105, type: 3}
+  - name: Sucess2
+    clip: {fileID: 8300000, guid: 332a9e2061450504e97fea8c4c41f915, type: 3}
   bgm:
   - name: BGM_1
     clip: {fileID: 8300000, guid: bea17c5297014b240b60cc82b14f85b4, type: 3}

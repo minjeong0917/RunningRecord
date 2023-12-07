@@ -73,6 +73,7 @@ public class ThirdStep : MonoBehaviour
         {
             health.GetLife();
             PlayerPrefs.SetInt("Step", 4);
+            AudioManager.instance.PlaySFX("Sucess2");
             tmp.text = "잘하셨습니다!";
             this.gameObject.SetActive(false);
             Invoke("NextStep", 1f);

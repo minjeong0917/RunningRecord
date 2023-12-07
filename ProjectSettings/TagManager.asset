@@ -11,6 +11,7 @@ TagManager:
   - item
   - start_stage1
   - start_stage2
+  - Clap
   layers:
   - Default
   - TransparentFX

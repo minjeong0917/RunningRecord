@@ -8,22 +8,19 @@ public class VideoController : MonoBehaviour
 
     void Start()
     {
-        // VideoPlayer가 준비되었을 때 호출되는 이벤트 리스너를 등록합니다.
-        videoPlayer.prepareCompleted += VideoPrepared;
-        // VideoPlayer가 종료되었을 때 호출되는 이벤트 리스너를 등록합니다.
-        videoPlayer.loopPointReached += VideoEnded;
+        // VideoPlayer가 준비되었을 때
+        videoPlayer.prepareCompleted += VideoStart;
+        // VideoPlayer가 종료되었을 때 
+        videoPlayer.loopPointReached += VideoEnd;
     }
 
-    void VideoPrepared(VideoPlayer vp)
+    void VideoStart(VideoPlayer vp)
     {
-        // VideoPlayer가 준비되면 재생을 시작합니다.
         videoPlayer.Play();
     }
 
-    void VideoEnded(VideoPlayer vp)
+    void VideoEnd(VideoPlayer vp)
     {
-        // 영상이 끝났을 때
-        // 다음 씬으로 이동
         SceneManager.LoadScene("Tutorial");
     }
 }

@@ -45,6 +45,7 @@ public class FirstStep : MonoBehaviour
 
                     if (health.currentLives == 3)
                     {//장애물을 통과했는데 라이프를 잃지 않았다면
+                        AudioManager.instance.PlaySFX("Sucess2");
                         tmp.text = "잘하셨습니다!";//텍스트 변경
                         this.gameObject.SetActive(false);
                         Invoke("NextStep", 1f);
