@@ -9,7 +9,7 @@ public class DataHandler : MonoBehaviour
     public void SaveData(string Filename, float xValue)
     {
         Debug.Log("/" + Filename + ".txt");
-        string filePath = Application.dataPath + "/Stages/"+SceneManager.GetActiveScene().name+"/"+Filename+".txt";
+        string filePath = Application.streamingAssetsPath + "/Stages/"+SceneManager.GetActiveScene().name+"/"+Filename+".txt";
         
 
 
@@ -18,7 +18,7 @@ public class DataHandler : MonoBehaviour
     }
     public void ChangeData(string Filename, float Value)
     {
-        string filePath = Application.dataPath + "/Stages/" + SceneManager.GetActiveScene().name + "/" + Filename + ".txt";
+        string filePath = Application.streamingAssetsPath + "/Stages/" + SceneManager.GetActiveScene().name + "/" + Filename + ".txt";
 
         File.WriteAllText(filePath, Value.ToString() + "\n");
 
@@ -28,7 +28,7 @@ public class DataHandler : MonoBehaviour
     public List<float> LoadData(string Filename)
     {
         List<float> loadedData = new List<float>();
-        string filePath = Application.dataPath + "/Stages/" + SceneManager.GetActiveScene().name + "/" + Filename + ".txt";
+        string filePath = Application.streamingAssetsPath + "/Stages/" + SceneManager.GetActiveScene().name + "/" + Filename + ".txt";
 
         if (File.Exists(filePath))
         {
@@ -49,7 +49,7 @@ public class DataHandler : MonoBehaviour
     public List<float> LoadData_stage(string stage, string Filename)
     {
         List<float> loadedData = new List<float>();
-        string filePath = Application.dataPath + "/Stages/" + stage + "/" + Filename + ".txt";
+        string filePath = Application.streamingAssetsPath + "/Stages/" + stage + "/" + Filename + ".txt";
 
         if (File.Exists(filePath))
         {
