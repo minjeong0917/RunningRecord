@@ -9,8 +9,6 @@ public class StageMenu : MonoBehaviour
     //[SerializeField] GameObject TitleMenu = null;
 
 
-
-
     public void BtnBack()
     {
         /*
