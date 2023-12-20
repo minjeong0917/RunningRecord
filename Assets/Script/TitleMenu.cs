@@ -12,21 +12,27 @@ public class TitleMenu : MonoBehaviour
     private void Start()
     {
         TutorialPopup.SetActive(false);
-        PlayerPrefs.SetInt("needTutorial", 0);
-        //PlayerPrefs.Save();
+        if(PlayerPrefs.HasKey("Tutorial")==false) {
+            {
+                PlayerPrefs.SetInt ("Tutorial", 0);
+                PlayerPrefs.Save ();
+            }
+		}
+
     }
 
     public void BtnPlay()
     {
 
-        if (PlayerPrefs.GetInt("needTutorial")==0)
+        if (PlayerPrefs.GetInt("Tutorial")==0)
         {
-
-            PlayerPrefs.SetInt("needTutorial", 1);
+            PlayerPrefs.SetInt("Tutorial", 1);
             PlayerPrefs.Save();
             TutorialPopup.SetActive(true);
-        }else if(PlayerPrefs.GetInt("needTutorial") == 1)
-            SceneManager.LoadScene("StageChoice");
+        }else if(PlayerPrefs.GetInt("Tutorial") == 1) {
+            SceneManager.LoadScene ("StageChoice");
+        }
+
 
         /*
         goStageUI.SetActive(true);
